@@ -5,11 +5,11 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - git:
-      repoURL: https://github.com/taveek/kargo-advanced.git
-      revision: HEAD
-      directories:
-      - path: env/*
+    - git:
+        repoURL: https://github.com/taveek/kargo-advanced.git
+        revision: HEAD
+        directories:
+          - path: env/*
   template:
     metadata:
       name: guestbook-{{path.basename}}
@@ -19,7 +19,7 @@ spec:
       destination:
         namespace: guestbook-{{path.basename}}
         # Specify either a cluster destination name or server address:
-        name: 
+        name: in-cluster
         # server: https://REPLACEME
       project: guestbook
       source:
