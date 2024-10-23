@@ -14,8 +14,11 @@ spec:
         app: guestbook
     spec:
       containers:
-      - image: ghcr.io/taveek/guestbook:latest
-        name: guestbook
-        ports:
-        - name: http
-          containerPort: 3000
+        - image: ghcr.io/taveek/guestbook:latest
+          name: guestbook
+          ports:
+            - name: http
+              containerPort: 3000
+          env:
+            - name: FOO
+              value: bar
