@@ -15,7 +15,12 @@ spec:
         app: guestbook
     spec:
       containers:
-      - image: ghcr.io/taveek/guestbook:v0.0.1
+      - env:
+        - name: FOO
+          value: bar
+        - name: BAR
+          value: foo
+        image: ghcr.io/taveek/guestbook:v0.0.2
         name: guestbook
         ports:
         - containerPort: 3000
