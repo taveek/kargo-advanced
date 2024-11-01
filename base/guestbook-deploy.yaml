@@ -22,3 +22,5 @@ spec:
           env:
             - name: FOO
               value: bar
+            - name: BAR
+              value: foo
